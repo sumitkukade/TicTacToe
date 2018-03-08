@@ -1,0 +1,58 @@
+SignUp - 
+        method : "POST",
+        url : "http://127.0.0.1/gameservice/user",
+        body:{
+          "username" : , 
+          "password" : ,
+          "alias" : ,
+    	  "email" : 
+        }
+ 
+LogIn - 
+        method : "POST",
+        url : "http://127.0.0.1/gameservice/uservalidation",
+        data:{
+          "email" : ,
+          "password" :
+        }
+
+get all game invitations - 
+
+        method : "GET",
+        url : "http://127.0.0.1/gameservice/gameinstance",
+        params:{
+          "token" :
+        }
+ 
+do request for game to another user -  
+
+        method : "POST",
+        url : "http://127.0.0.1/gameservice/gameinstance",
+        params:{
+          "token" :
+        }
+        data:{
+          "email" : user2_email,
+        }
+
+user1 accept request from user2 -
+        method : "PUT",
+        url : "http://127.0.0.1/gameservice/gameinstance",
+        params:{
+          "token" : user2_token
+        }
+        data:{
+          "email" : user1_email,
+        }
+
+make move -
+        method : "POST",
+        url : "http://127.0.0.1/gameservice/move",
+        params:{
+          "token" : user_token
+        }
+        data:{
+            "game_instance" : game_instance_id,
+            "row":
+            "column":
+        }

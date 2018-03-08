@@ -1,0 +1,28 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="../css/tictactoe.css">
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/basic_functions.js"></script>
+
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl" id="stripe" ng-init="refresh_ttt()">
+		<h1>Tic Tac Toe</h1>
+		<marquee><h3><span ng-bind="winner_name"></span></h3></marquee>
+		<input type="button" id="1" class="tictacBtn" value=" " ng-click="box_1_clicked()">
+		<input type="button" id="2" class="tictacBtn" value=" " ng-click="box_2_clicked()">
+		<input type="button" id="3" class="tictacBtn" value=" " ng-click="box_3_clicked()"><br>
+		<input type="button" id="4" class="tictacBtn" value=" " ng-click="box_4_clicked()">
+		<input type="button" id="5" class="tictacBtn" value=" " ng-click="box_5_clicked()">
+		<input type="button" id="6" class="tictacBtn" value=" " ng-click="box_6_clicked()"><br>
+		<input type="button" id="7" class="tictacBtn" value=" " ng-click="box_7_clicked()">
+		<input type="button" id="8" class="tictacBtn" value=" " ng-click="box_8_clicked()">
+		<input type="button" id="9" class="tictacBtn" value=" " ng-click="box_9_clicked()"><br>
+		<h3>Currently Playing: <span ng-bind="curr_user"></span> </h3>
+		<!--<button ng-click="reset();" class="">New Game</button>-->
+	</div>
+</body>
+</html>

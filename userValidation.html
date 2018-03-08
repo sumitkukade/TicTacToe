@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script  type="text/javascript" src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/tictactoe.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/basic_functions.js"></script>
+
+	<style>
+	table, th , td {
+		border: 1px solid grey;
+		border-collapse: collapse;
+		padding: 5px;
+		}
+		table tr:nth-child(odd) {
+			background-color: #f1f1f1;
+		}
+
+		table tr:nth-child(even) {
+			background-color: #ffffff;
+		}
+</style>
+
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl" ng-init="get_pending_requests_interval()">
+	user:<span ng-bind="curr_user"></span>
+		<br>Request User<br>
+		<input type="text" ng-model="email" placeholder="Email"><br><br>
+		<input type="button" value="request" ng-click="request()">
+	
+	<br>
+	<br>
+		<table>
+			<tr><td>Pending Requests</td><td>Accept/Reject</td></tr>
+			<tr ng-repeat="x in requests">
+				<td>{{x.buttonValue}}</td>
+				<td><button ng-click="accept_user(x.user1)">Accept</button> <button ng-click="">Reject</button></td>
+			</table>
+			</tr>
+			<br>
+			<br>
+			<br>
+		<table>
+			<tr><td>Game In Action</td></tr>
+			<tr ng-repeat="x in game_in_action">
+				<td>{{x.buttonValue}}</td>
+				<td><button ng-click="play(x.GameInstanceId)">Play</button></td>
+			</tr>
+		</table>
+<br><br>
+		<table>
+			<tr><td>Completed</td></tr>
+			<tr ng-repeat="x in completed_game">
+				<td>{{x.buttonValue}}</td>
+				<td><button ng-click="play(x.GameInstanceId)">Show</button></td>
+			</tr>
+		</table>
+
+		<span id="pending_requests"></span>
+	</div>
+
+</body>
+</html>

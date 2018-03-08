@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="css/tictactoe.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/basic_functions.js"></script>
+
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		Email<br>
+		<input type="text" ng-model="email" placeholder="Email"><br><br>
+		Password:<br>
+		<input type="password" ng-model="password" placeholder="Password"><br><br>
+		<input type="button" value="login" ng-click="login()">
+		<input type="button" value="signup" ng-click="goto_signup()">
+	</div>
+
+</body>
+</html>
